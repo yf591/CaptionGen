@@ -1,28 +1,33 @@
-# CaptionGen: Automatic Image Captioning App
+# CaptionGen: Automated Image Captioning Application
+
 
 ## Overview
-CaptionGen is a lightweight application that generates captions for images in a selected folder. Leveraging a pre-trained Hugging Face model, this app provides a simple GUI to process image data and save captions as text files.
+CaptionGen is a lightweight application that automatically generates captions for images within a selected folder.
+
+It utilizes pre-trained models from Hugging Face and processes image data through a simple GUI, saving the captions as text files.
 
 
 ## Features
-- Automatically scans and processes images from a folder.
+- Automatically scans and processes images within a folder.
 - Generates captions using the `Salesforce/blip-image-captioning-base` model.
-- Saves each caption as a `.txt` file in a dedicated folder.
+- Saves each caption in a `.txt` file format in a dedicated folder.
 
 
 ## How It Works
-1. **Image Detection**: The app scans the selected folder for supported image formats (`.jpg`, `.jpeg`, `.png`, `.bmp`, `.gif`).
-2. **Caption Generation**: Each image is processed using a Hugging Face pre-trained model, and a natural-language description is generated.
-3. **Saving Results**: Captions are saved as text files under the `captions/` folder.
+1. **Image Detection**: Scans the selected folder for supported image formats (`.jpg`, `.jpeg`, `.png`, `.bmp`, `.gif`).
+2. **Caption Generation**: Analyzes each image using a pre-trained model from Hugging Face and generates natural language descriptions.
+3. **Result Storage**: Saves each caption as a text file in the `captions/` folder.
 
 
 ## File Structure
 ```
 CaptionGen/
-├── README.md               # Overview and usage in English
-├── overview.md             # Detailed explanation of the application's behavior in English
+├── README-en.md            # English overview and usage instructions
+├── overview-en.md          # Detailed English description
+├── README-ja.md            # Japanese overview and usage instructions
+├── overview-ja.md          # Detailed Japanese description
 ├── requirements.txt        # Required Python packages
-├── main.py                 # Main script to launch the app
+├── main.py                 # Application startup script
 ├── utils/
 │   ├── __init__.py         # Package initialization file
 │   ├── caption_generator.py # Caption generation logic
@@ -37,9 +42,11 @@ CaptionGen/
 
 
 ## Installation and Usage
-### Requirements
-- Python 3.9 or above
-- GPU recommended but not mandatory
+
+### Prerequisites
+- Python 3.9 or higher
+- GPU recommended (but not required)
+
 
 ### Setup
 1. Clone the repository:
@@ -48,26 +55,38 @@ CaptionGen/
    cd CaptionGen
    ```
 
-2. Install dependencies:
+2. Install the required libraries:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the app:
+3. Run the application:
    ```bash
    python main.py
    ```
-   A folder selection dialog will appear. Select the folder where your images are stored. The captions will be generated (this may take time depending on the number of images).
-   *Note: For approximately 20 images, it may take around 3-5 minutes to generate captions after selecting the folder.*
+
+4. When the GUI appears, click the "Select Folder" button and choose the folder (**not zipped**) containing the images for which you want to generate captions.
+   *Note: Depending on the number of images, it may take some time.
+
+5. The application will generate captions for each image in the selected folder and save them as text files in the `data/captions/` directory.
+   *Note: For about 20 images, it takes approximately 3-5 minutes for caption generation to start after selecting a folder.
+
+
+## Detailed Description
+
+A more detailed description of the application can be found in `overview-en.md`.
 
 
 ## Disclaimer
-The developer is not responsible for any damages, losses, or disadvantages arising from the use of this application. Use at your own risk. This application is provided "as is" without any warranty of any kind.
+
+The developer is not responsible for any damages, losses, or disadvantages arising from the use of this application. Please use it at your own risk. This application is provided as is, without any warranty.
 
 
 ## License
-This application uses the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0) for included libraries. Ensure you adhere to the model's specific license terms.
+
+This application is built under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Please comply with the specific license terms of the models used.
 
 
 ## Developer
+
 yf591
