@@ -3,4 +3,3 @@ transformers
 diffusers
 Pillow
 tqdm
-tkinter

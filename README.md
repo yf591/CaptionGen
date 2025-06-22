@@ -22,8 +22,9 @@ It utilizes pre-trained models from Hugging Face and processes image data throug
 ## File Structure
 ```
 CaptionGen/
-├── README-en.md            # English overview and usage instructions
-├── overview-en.md          # Detailed English description
+├── LICENSE                 # License file
+├── README.md               # English overview and usage instructions
+├── overview.md             # Detailed English description
 ├── README-ja.md            # Japanese overview and usage instructions
 ├── overview-ja.md          # Detailed Japanese description
 ├── requirements.txt        # Required Python packages
@@ -31,7 +32,7 @@ CaptionGen/
 ├── utils/
 │   ├── __init__.py         # Package initialization file
 │   ├── caption_generator.py # Caption generation logic
-│   ├── file_handler.py     # File handling logic
+│   └── file_handler.py     # File handling logic
 ├── data/
 │   ├── images/             # Folder for input images
 │   └── captions/           # Folder for generated captions
@@ -49,18 +50,29 @@ CaptionGen/
 
 
 ### Setup
-1. Clone the repository:
+1. Clone the repository
    ```bash
    git clone https://github.com/yf591/CaptionGen.git
    cd CaptionGen
    ```
 
-2. Install the required libraries:
+2. Create and activate a virtual environment
+   ```bash
+   # Windows
+   python -m venv .venv
+   .venv\Scripts\activate
+
+   # macOS/Linux
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. Install the required libraries
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Run the application:
+3. Run the application
    ```bash
    python main.py
    ```

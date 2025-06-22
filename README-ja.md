@@ -21,6 +21,9 @@ Hugging Faceの事前学習済みモデルを利用し、シンプルなGUIで�
 ## ファイル構成
 ```
 CaptionGen/
+├── LICENSE                 # ライセンスファイル
+├── README.md               # 英語版のアプリケーション概要と使用方法
+├── overview.md             # 英語版の詳細な説明
 ├── README-ja.md            # 日本語版のアプリケーション概要と使用方法
 ├── overview-ja.md          # 日本語版の詳細な説明
 ├── requirements.txt        # 必要なPythonパッケージ
@@ -28,7 +31,7 @@ CaptionGen/
 ├── utils/
 │   ├── __init__.py         # パッケージ初期化ファイル
 │   ├── caption_generator.py # キャプション生成ロジック
-│   ├── file_handler.py     # ファイル操作ロジック
+│   └── file_handler.py     # ファイル操作ロジック
 ├── data/
 │   ├── images/             # 入力画像を格納するフォルダ
 │   └── captions/           # 生成されたキャプションを保存するフォルダ
@@ -46,26 +49,37 @@ CaptionGen/
 
 
 ### セットアップ
-1. リポジトリをクローンします：
+1. リポジトリをクローンします。
    ```bash
    git clone https://github.com/yf591/CaptionGen.git
    cd CaptionGen
    ```
 
-2. 必要なライブラリをインストールします：
+2. 仮想環境を作成してアクティベートします。
+   ```bash
+   # Windows
+   python -m venv .venv
+   .venv\Scripts\activate
+
+   # macOS/Linux
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. 必要なライブラリをインストールします。
    ```bash
    pip install -r requirements.txt
    ```
 
-3. アプリを実行します：
+4. アプリを実行します。
    ```bash
    python main.py
    ```
 
-4. GUIが表示されたら、「フォルダを選択」ボタンをクリックして、キャプションを生成したい画像が含まれているフォルダ（**Zip化されていないもの**）を選択します。
+5. GUIが表示されたら、「フォルダを選択」ボタンをクリックして、キャプションを生成したい画像が含まれているフォルダ（**Zip化されていないもの**）を選択します。
    ※生成枚数次第で時間がかかる可能性あり
 
-5. アプリケーションが選択されたフォルダ内の各画像に対してキャプションを生成し、`data/captions/`フォルダ内にテキストファイルとして保存します。
+6. アプリケーションが選択されたフォルダ内の各画像に対してキャプションを生成し、`data/captions/`フォルダ内にテキストファイルとして保存します。
    ※参考：20枚程度であれば、フォルダ選択後にキャプションが生成が開始されるまでに3～5分程度かかります。
 
 
